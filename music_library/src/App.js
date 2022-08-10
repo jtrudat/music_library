@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import Gallery from './components/Gallery'
 import SearchBar from './components/SearchBar'
-
+const axios = require('axios').default
 
 function App(){
     let [search, setSearch] = useState('')
@@ -12,7 +12,6 @@ function App(){
 
     useEffect(() => {
       if(search) {
-        let axios = require('axios').default
         axios.baseURL = "https://itunes.apple.com"
         axios.get(`/search?term=${search}`)
           .then(function(response) {

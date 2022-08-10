@@ -1,4 +1,5 @@
 import GalleryItem from './GalleryItem'
+import {useContext} from 'react'
 
 function Gallery(props){
 
